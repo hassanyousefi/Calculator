@@ -1,0 +1,517 @@
+
+@font-face {
+     font-family: "Segoe UI";
+     src: url("//db.onlinewebfonts.com/t/623c7118249e082fe87a78e08506cb4b.eot");
+    }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI";
+}
+
+
+html,
+body{
+       background-color: #e6e6e6;
+       height: 100%;
+       width: 100%;
+       user-select:none;
+       min-height: 355px;
+       min-width: 500px;
+   }
+
+   .content{
+       display: flex;
+       cursor: default;
+       height: 95.2%;
+       width: 100%;
+   }
+
+   .left{
+       height: 100%;
+       width: 85%;
+   }
+
+   .right{
+       
+       width: 319px;
+       /* border-left: 1px solid #bdbdbd; */
+
+   }
+
+   #topname{
+       
+       padding: 7.5px 0px 9px 12px;
+       font-size: 12px;
+       font-weight: 400;
+   }
+
+
+   header{
+       height: 4.8%;
+       display: flex;
+       justify-content: space-between;
+   }
+
+   .caption{
+       height: 8%;
+       display: flex;
+       justify-content: space-between;
+   }
+   
+   .capleft{
+       display: flex;
+       justify-content: space-between;
+   }
+
+   .caption .menubar{
+       
+       width: 48px;
+       height: 48px;
+       align-content: center;
+       padding-left: 10px;
+       padding-top: 15px;
+       
+    }
+
+    .caption .menubar:hover{
+        background-color: #cfcfcf;
+    }
+
+    .caption .menubar:active{
+     background-color: #c2c2c2;
+    }
+
+    #imagebar{
+       width: 27px;
+       height: 18px;
+       margin: auto;
+   }
+
+   .menutext{
+       font-size: 19px;
+       font-weight: 500;
+       padding: 9px 0 0 12px
+   }
+
+
+
+   .zero{
+       height: 19.1%;
+       display: flex;
+       font-size: 47px;
+       font-weight: 600;
+       align-items: center;
+       justify-content: flex-end;
+       padding: 13px;
+       
+   }
+
+   .line1{
+       height: 6.8%; 
+       display: flex;       
+   }
+
+   .line1 div{
+       display: flex;
+       flex-basis: 80px;
+       font-size: 12px;
+       font-weight: 600;
+       align-items: center;
+       justify-content: center;
+   }
+   .line1 div:hover{
+       background-color: #dddddd;
+   }
+   .line1 div:active{
+       background-color: #c6c6c6;
+   }
+
+   #newM{
+       flex-grow: 2;
+       flex-basis: 100px;
+       padding-right: 30px;
+       justify-content: flex-end;
+       color: rgb(201, 201, 201);
+   }
+   #newM:hover{
+    background-color: #e6e6e6;
+   }
+   #newM:active{
+    background-color: #e6e6e6;
+   }
+
+   .mainnum{
+       height: 66.1%;
+       padding: 1px solid #e6e6e6;
+   }
+
+   .main{
+       
+       display: flex; 
+       height: 20%;
+   }
+
+   .main div:hover{
+    background-color: #e6e6e6;
+   }
+
+   .main div{
+       display: flex;
+       flex: 100px;
+       margin: 1px;
+       background-color: #f0f0f0;
+       align-items: center;
+       justify-content: center;
+   }
+
+    .main div:active{
+       background-color:#c6c6c6 ;
+   }
+
+   #number, #dot , #plus-mines{
+       font-size: 28px;
+       font-weight: 600;
+   }
+   #number{
+       background-color: #fafafa;
+   }
+   #number:hover{
+    background-color: #e6e6e6;
+    }
+
+    #number:active{
+        background-color: #c6c6c6;
+    }
+
+
+   #percent{
+       font-size: 25px;
+   }
+
+   #C ,#CE{
+       font-size: 20px;
+       font-weight:400 ;
+   }
+
+   #delete{
+       width: 26px;
+       height: 27px;
+   }
+
+   #division{
+       font-size: 34px;
+   }
+
+   #root{
+       font-size: 28px;
+   }
+
+   #multiply{
+       font-size: 23px;
+       font-weight: 600;
+   }
+
+   #power2, #power3 , #mines-power{
+       font-size:20px;
+       font-weight: 400;
+   }
+
+   #mines{
+       font-size: 60px;
+       font-weight: 100;
+   }
+
+   #plus{
+       font-size: 44px;
+       font-weight: 100;
+   }
+
+   #equal{
+    font-size: 41px;
+    font-weight: 100;
+   }
+
+   #equal:hover{
+       background-color: #299fcc;
+   }
+
+   #equal:active{
+    background-color: #65b7d7;
+   }
+
+
+    .MMC{
+        width: 319px;
+       display: flex;
+       justify-content: flex-end;
+       
+
+   }
+
+   .MMC div{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 46px;
+       height: 31px;  
+   }
+
+
+   #maxiicon{
+       margin-bottom: 3.1px;
+   }
+
+   .minimise{
+       font-size: 10px;
+       padding-bottom: 2px;
+   }
+
+   .minimise:hover{
+    background-color: #cfcfcf;
+   }
+
+   .minimise:active{
+    background-color: #c2c2c2;
+   }
+
+   .maximise:hover{
+    background-color: #cfcfcf;
+   }
+
+   .maximise:active{
+    background-color: #c2c2c2;
+   }
+
+   .close{
+       font-size: 14px;
+   }
+
+   .close:hover{
+       color: white;
+       background-color: rgb(233, 1, 1);
+   }
+
+   .close:active{
+       color: black;
+       background-color: rgb(250, 145, 126);
+   }
+
+   .topright{
+       display: flex;
+       height: 40px;
+   }
+
+   .topright div{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 13px;
+       width: 75px;
+       letter-spacing: -0.5px;
+   }
+
+   .memory{
+    color: #919191;
+   }
+
+
+   .history h3{
+       border-bottom: 2px solid coral;
+       padding-top: 7px;
+       padding-bottom: 5px;
+   }
+
+
+
+   .textright{
+    display: flex;
+    height: 83px;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    width: 169px;
+    letter-spacing: -0.5px;
+   }
+
+   .nextline2{
+    background-color: #e6e6e6;
+    display: flex; 
+    height: 20%;
+   }
+
+
+   .nextline2 div{
+    background-color: #f0f0f0;
+    display: flex;
+    flex: 100px;
+    align-items: center;
+    justify-content: center;
+    margin: 1px;
+   }
+
+
+   .nextline2 div:hover{
+       background-color: #e6e6e6;
+    }
+
+
+    .nextline2 div:active{
+        background-color:#c6c6c6;
+    }
+
+
+    #historyimg{
+       width: 20px;
+       height: 20px;
+       
+       
+    }
+
+
+    .nexthistory{
+        padding:17px 13px 0 10px;
+    }
+
+
+    .nexthistory{
+        display: none;
+    }
+    #newM{
+        display: none;
+    }
+    .nextline2{
+        display: none;
+    }
+
+
+    /* --------------------------------------------------------------------------------------------- */
+    
+
+    @media only screen and (max-width: 500px) {
+        .right{
+            display: none;
+        }
+        .left{
+            width: 100%;
+        }
+        
+        .nexthistory{
+            display: flex;
+        }
+        #newM{
+            display: flex;
+        }
+
+    }
+
+
+    @media only screen and (max-width: 740px) {
+        .right{
+            flex: 43%
+        }
+
+    }
+
+
+    @media only screen and (max-width:500px){
+    #newM{
+        justify-content: center;
+        flex-grow: 1;
+        padding: 0;
+    }
+    }
+
+
+
+    @media only screen and (max-width: 1024px) , (max-height: 620px){
+
+    .nextline2{
+        display: flex;
+    }
+    .main{
+        height: 16.6%;
+    }
+    .nextline2{
+        height: 16.6%;
+    }
+    .main #percent{
+        display: none;
+    }
+
+    .main #root, .main #power2, .main #power3,.main #mines-power{
+        display: none;
+      }
+    
+    }
+
+
+
+    @media only screen and (max-height: 620px) , (max-width: 360px){
+
+
+    #number, #dot , #plus-mines{
+        font-size: 24px;
+        font-weight: 600;
+    }
+ 
+    #percent{
+        font-size: 20px;
+    }
+ 
+    #delete{
+        width: 22px;
+        height: 23px;
+    }
+
+    #C ,#CE{
+        font-size: 17px;
+        font-weight:400 ;
+    }
+ 
+    #division{
+        font-size: 30px;
+    }
+ 
+    #root{
+        font-size: 24px;
+    }
+ 
+    #multiply{
+        font-size: 18px;
+        font-weight: 600;
+    }
+ 
+    #power2 , #mines-power{
+        font-size:18px;
+        font-weight: 400;
+    }
+ 
+    #mines{
+        font-size: 40px;
+        font-weight: 100;
+    }
+ 
+    #plus{
+        font-size: 36px;
+        font-weight: 100;
+    }
+ 
+    #equal{
+     font-size: 34px;
+     font-weight: 100;
+    }
+
+    .nextline2{
+        display: flex;
+    }
+
+    }
+
+
+
+
