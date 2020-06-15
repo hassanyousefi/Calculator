@@ -98,16 +98,25 @@ body{
        padding: 9px 0 0 12px
    }
 
+   .exprestion{
+       height: 6%;
+       display: flex;
+       font-size: 15px;
+       align-items: center;
+       justify-content: flex-end;
+       padding: 10px 13px 0 0;
+       color: #6b6b6b;
 
+   }
 
    .zero{
-       height: 19.1%;
+       height: 13.1%;
        display: flex;
        font-size: 47px;
        font-weight: 600;
        align-items: center;
        justify-content: flex-end;
-       padding: 13px;
+       padding: 0 13px 10px 0;
        
    }
 
@@ -329,12 +338,12 @@ body{
 
 
    .textright{
-    display: flex;
-    height: 83px;
-    align-items: center;
-    justify-content: center;
+    /* display: flex; */
+    /* height: 83px; */
+    /* align-items: center;
+    justify-content: center; */
     font-size: 13px;
-    width: 169px;
+    width: 100%;
     letter-spacing: -0.5px;
    }
 
@@ -512,6 +521,17 @@ body{
 
     }
 
+    #mem{
+        margin: 30px 10px;
+
+    }
 
 
+    #history-box{
+        background-color: #299fcc;
+        width: 100%;
+        height: auto;
+        /* overflow: scroll; */
+        display: block;
+    }
 

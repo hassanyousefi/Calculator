@@ -43,9 +43,8 @@
                         <div class="nexthistory"> <img id="historyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB4klEQVRYR+2W4U3DQAyFXyeAEWACygZsAEwAbFA2gAmACYAJgA1ggsIEMAJMAPqQXSXpxXfXRO2fWqoa5S7287PvnSfasE02HF9bALUM7Eo6k3RipTuy/3dJX5JeJb3Yc1F1SwEQ+EbSeZFX6UHSdQmQFIBfC+JrZHsvCRAYGRLg2zLm3dR+MAJDGOsXkp4j0DkAZExw7M0YgOrI9iTdSjq2TYAAcNIiAKeSnuwr6LxKeOiy1dwys7LxDl9JJiIAUAjtfcFxHAFg3UHga9/K0sojAuC0e6enKMwB4BsypxyPqSbOAegG7e4vAUBPfJojWGj10DoANFm4tAZdJFaqA31NXMIA3/pp4gi7iP37XBcAdGIuCcU8bGYzFoAUQ0X9khOijOYsjuGoAKDpwKjieQzzEnyYZIdN6Oc2lNBKVFVN6OqVFI7KwL7dkyo6hqFwrACgWoiIwe3FtQpyLpIhVi3FBAM1DbgjaYm2CjRezh/zyaXUskgHUCy/jnF0VxGYrStfx804zYEEKmGjZCBhfHPJrR5IuoniiJ6gHN4fDJ+cadcJzjnawdXtcyO081w9kqWYpieYiHzey1WDI0wJlmpe0wN9QGCETAFF1hhs+FhOxrkyhUqYy27U9aG34WAwWwB/XytsITVxIuMAAAAASUVORK5CYII=" alt=""></div>
                     </div>
 
-                    <div class="zero">
-                        0
-                    </div>
+                    <div id="expres" class="exprestion"></div>
+                    <div id="zer" class="zero">0</div>
 
                     <div class="line1">
                         
@@ -71,43 +70,43 @@
                                 <div id="CE">CE</div>
                                 <div id="C">C</div>
                                 <div id="del"><img id="delete" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABDklEQVRYR+2W4Q3CIBSErxu4iY6gm+hmbqIj6CZuUHNJMeQFeAelaUzoT8LjPo570Ak7f9PO+hgAw4G/cuAA4AHg1KFzfhtXHegpTv4qgFj8DeAM4NPowrzUyQA9xaldBaCIc451IzUWDJMBFPE7gCOASwQR6l4AboljkgAUcc55LgAUIwS/0CW5rLgAinjYmIXgOFu0FNQiQI14CoJjXpe4ANZWr93s/RCOI1cnHYEKYR2jAwxlCcIF4CKpgKVazQaOtR68BKBCsA0ZuvhmDPB04drahrmUx/0ez9nkIqqBqHkW5COIF1UyoUI0AdhMqGKlefJrmHNiLUQTwFrRZL36R7SJOBcdAMOB3R34AqM1YCEu+sgCAAAAAElFTkSuQmCC" alt=""></div>
-                                <div id="division">&#xf7</div>
+                                <div onclick="cal.res(this)" value="/" id="division">&#xf7</div>
                             </div>
                             
                             
                             <div class="main line3">
-                                <div id="root">&#8730</div>
-                                <div id="number">7</div>
-                                <div id="number">8</div>
-                                <div id="number">9</div >
-                                <div id="multiply">&#10005</div>
+                                <div onclick="cal.res(this)" value="√" id="root">&#8730</div>
+                                <div onclick="cal.res(this)" value="7" id="number">7</div>
+                                <div onclick="cal.res(this)" value="8" id="number">8</div>
+                                <div onclick="cal.res(this)" value="9" id="number">9</div >
+                                <div onclick="cal.res(this)" value="*" id="multiply">&#10005</div>
                             </div>
 
 
                             <div class="main line4">
-                                <div id="power2">&#120013&#178</div>
-                                <div id="number">4</div >
-                                <div id="number">5</div >
-                                <div id="number">6</div>
-                                <div id="mines">-</div>
+                                <div onclick="cal.res(this)" value="x2" id="power2">&#120013&#178</div>
+                                <div onclick="cal.res(this)" value="4" id="number">4</div >
+                                <div onclick="cal.res(this)" value="5" id="number">5</div >
+                                <div onclick="cal.res(this)" value="6" id="number">6</div>
+                                <div onclick="cal.res(this)" value="-" id="mines">-</div>
                             </div>  
                             
                             
                             <div class="main line5">
-                                <div id="power3">&#120013&#179</div>
-                                <div id="number">1</div>
-                                <div id="number">2</div>
-                                <div id="number">3</div>
-                                <div id="plus">+</div>
+                                <div onclick="cal.res(this)" value="x3" id="power3">&#120013&#179</div>
+                                <div onclick="cal.res(this)" value="1" id="number">1</div>
+                                <div onclick="cal.res(this)" value="2" id="number" >2</div>
+                                <div onclick="cal.res(this)" value="3" id="number" >3</div>
+                                <div onclick="cal.res(this)" id="plus" value="+">+</div>
                             </div>   
                             
                             
                             <div class="main line6">
-                                <div id="mines-power">&#185/&#120013</div>
-                                <div id="plus-mines">&#177</div>
-                                <div id="number">0</div>
-                                <div id="dot">&#8729</div>
-                                <div id="equal">=</div>
+                                <div onclick="cal.res(this)" value="1/x" id="mines-power">&#185/&#120013</div>
+                                <div onclick="cal.res(this)" value="±" id="plus-mines">&#177</div>
+                                <div onclick="cal.res(this)" value="0" id="number">0</div>
+                                <div onclick="cal.res(this)" value="." id="dot">&#8729</div>
+                                <div onclick="cal.res(this)" value="=" id="equal">=</div>
                             </div>
                     </div>
 
@@ -125,8 +124,10 @@
                         <h3 id="mem">Memory</h3>
                     </div>
                 </div>
+
                 <div class="textright">
                     <h3 id="mem">There's no history yet</h3>
+                    <!-- <div id="history-box">5=0</div> -->
                 </div>
 
                 <div>
@@ -137,6 +138,7 @@
 
         </div>
 
-    
+    <script src="mohasebe.js"></script>
+    <script src="history.js"></script>
 </body>
 </html>
