@@ -329,11 +329,10 @@ body{
    }
 
 
-   .history h3{
-       border-bottom: 2px solid coral;
-       padding-top: 7px;
-       padding-bottom: 5px;
+   .history,#mem{
+    color: gray;
    }
+
 
 
 
@@ -521,17 +520,119 @@ body{
 
     }
 
-    #mem{
+    #hisText{
         margin: 30px 10px;
-
     }
-
+    #memoText{
+        margin: 30px 10px;
+    }
+    .display-off{
+        
+        display: none !important;
+    }
 
     #history-box{
-        background-color: #299fcc;
+        
+        overflow: auto;
+        padding: 10px 0;
+        max-height:546px;
+
+    }
+
+     #history-box .lable{
         width: 100%;
         height: auto;
-        /* overflow: scroll; */
-        display: block;
+        display: flex;
+        padding: 7px 14px;
+        margin: 5px 0;
+        align-items: flex-end;
+        flex-direction: column;
+
     }
+    .lable:hover{
+        background-color: #b9b9b9;
+    }
+
+    #history-box .lable .exp{
+        font-size: 15px;
+        margin-bottom: 4px;
+        color: #6b6b6b;
+    }
+    #history-box .lable .result{
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    #memory-box .lable{
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 5px 0;
+        align-items: flex-end;
+        flex-direction: column;
+
+    }
+    #memory-box .lable .number{
+        font-size: 25px;
+        font-weight: 600; 
+        margin: 12px; 
+    }
+    #memory-box .lable .button {
+        display: flex;
+        flex-direction: row;
+
+    }
+    #memory-box .lable .button aside{
+        text-align: center;
+        padding: 10px 13px;
+        margin: 0 0 0 15px;
+        font-size: 12px;
+        font-weight: 600;
+
+    }
+    .button aside:hover{
+        background-color: rgb(206, 206, 206);
+    }
+
+    .removeHistory{
+        position: absolute;
+        background-color: transparent;
+        right: 0;
+        bottom: 0;
+        width: 45px;
+        height: 45px ;
+        text-align: center;
+    }
+    .removeHistory:hover{
+        background-color: rgb(206, 206, 206);
+    }
+    .active-state{
+        transition: 0.4s;
+        border-bottom: 2px solid coral;
+        padding-top: 7px;
+        padding-bottom: 5px;
+        color: black !important;
+    }
+
+
+
+    /* #history-box-mini{
+        overflow: auto;
+        padding: 10px 0;
+        
+        
+    }
+
+
+    .mini-box{
+        max-height:546px;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        flex-direction: column;
+    } */
+
+
+
 

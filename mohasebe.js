@@ -1,89 +1,187 @@
-var Doc = document.getElementById.bind(document);
+var Calculate = (function () {
+  var firstResult ="";
+  var lastResult ="";
 
-var cal = (function x() {
-var myText ="";
-var temp ="";
-var resultText = "";
-    function res(num){
+    function Input(operator){
+      firstResult+="";
+      if(input=="="){
+        firstResult = resultBox.innerHTML;
+        expression = resultBox.innerHTML;
+        click = true;
+      }
+      input = operator.getAttribute("value");
       
-      var input = num.getAttribute("value");
+      if(firstResult.indexOf(".")>-1&&input==".")return;
+
+      if(isNaN(input)&&previousInput=="")return;
+      
+      if((input=="+"&&previousInput=="+")||(input=="-"&&previousInput=="-")||(input=="*"&&previousInput=="*")||(input=="/"&&previousInput=="/")){
+        return
+      }
+      
+      if((input=="*"||input=="/"||input=="-"||input=="+")&&(previousInput=="*"||previousInput=="/"||previousInput=="-"||previousInput=="+")){
+          firstResult =firstResult.slice(0,-1);
+          expression = expression.slice(0,-2);
+      }
+      
+      
       if(isNaN(input) && input!="."){
+
+        click = false;
+
         switch(input){
           case "*":
-            resultText += " × ";
+            expression += " × ";
+          break;
+          case "=":
+            historyExpression = expression;
+            expression="";
           break;
           case "/":
-            resultText += " ÷ ";
+            expression += " ÷ ";
           break;
           case "√":
-            resultText = "√("+ resultText + ")"
-            myText = Math.pow(myText , 1/2) 
+            
+            if(lastResult==""){
+              expression = "√("+ expression + ")"
+              firstResult = Math.pow(firstResult , 1/2) 
+            }
+            else{
+              expression = expression.slice(0, -lastResult.length)+"√("+ lastResult + ")";
+              firstResult = firstResult.replace(lastResult,Math.pow(lastResult, 1/2)) 
+            }
           break;
           case "x2":
-            resultText = "sqr("+ resultText + ")"
-            myText = Math.pow(myText , 2) 
+            if(lastResult==""){
+              expression = "sqr("+ expression + ")"
+              firstResult = Math.pow(firstResult , 2) 
+            }
+            else{
+              expression = expression.slice(0, -lastResult.length)+"sqr("+ lastResult + ")";
+              firstResult = firstResult.replace(lastResult,Math.pow(lastResult, 2)) 
+            }
           break;
           case "x3":
-            resultText = "cube("+ resultText + ")"
-            myText = Math.pow(myText , 3) 
+            if(lastResult==""){
+              expression = "cube("+ expression + ")";
+              firstResult = Math.pow(firstResult , 3);
+            }
+            else{
+              expression = expression.slice(0, -lastResult.length)+"cube("+ lastResult + ")";
+              firstResult = firstResult.replace(lastResult,Math.pow(lastResult, 3));
+            }
           break;
           case "1/x":
-            resultText = "1/("+ resultText + ")"
-            myText = 1/myText
+            if(lastResult==""){
+              expression = "1/("+ expression + ")";
+              firstResult = 1/firstResult;
+            }
+            else{
+              expression = expression.slice(0, -lastResult.length)+"1/("+ lastResult + ")";
+              firstResult = firstResult.replace(lastResult,1/lastResult);
+            }
           break;
           case "±":
-            resultText = "negate("+ resultText + ")"
-            myText = -1*myText
+            if(lastResult==""){
+              expression = "negate("+ expression + ")"
+              firstResult = -1*firstResult
+            }
+            else{
+              expression = expression.slice(0, -lastResult.length)+"negate("+ lastResult + ")";
+              firstResult = firstResult.replace(lastResult,-1*lastResult);
+            }
           break;
           default:
-            resultText += " " +input +" ";
+            expression += " " +input +" ";
         }
-        myText = eval(myText);
-        display(myText);
-        if(input!="√" && input!="x2" && input!="x3" && input!="1/x" && input!="±")
-        myText += input;
-        temp='';
+
+        firstResult = eval(firstResult);
+        display(firstResult);
+        if(input!="√" && input!="x2" && input!="x3" && input!="1/x" && input!="±"&&input!="=")
+        firstResult += input;
+        lastResult='';
       }
 
-
-
-
       else{
-        resultText += input
-        if (isNaN(myText)){
-          temp += input;
-          myText+= input;
-          display(temp);
 
+        if(click){
+          firstResult="";
+          expression="";
+          click=false;
+        }
+        expression += input;
+        if (isNaN(firstResult)){
+          lastResult += input;
+          firstResult+= input;
+          display(lastResult);
         }
         else{
-          myText += input;
-          display(myText)
+          firstResult += input;
+          display(firstResult)
         }
         
                 
       }
-       
+
+      if(input=="="){
+        myHistory.newHistory();
+      }
+      previousInput = input;   
     }
 
 
-    function display(char){
-        Doc("zer").innerHTML = char;
-        Doc("expres").innerHTML = resultText;
+    function clear(type){
+      
+      switch(type){
+        case "All":
+          firstResult = "";
+          lastResult = "";
+          expression = "";
+          display(0);
+        break;
+
+        case "CE":
+          if(isNaN(firstResult)){
+            firstResult = firstResult.slice(0, -lastResult.length);
+            expression = expression.slice(0, -lastResult.length)
+            
+          }
+          display(0);
+          lastResult = "";
+        break;
+
+        case "backSpace":
+          if(lastResult!=""||!isNaN(firstResult)){
+            firstResult = firstResult.slice(0,-1);
+            expression = expression.slice(0, -1);
+            display(firstResult)
+            if(isNaN(firstResult)){
+              lastResult=lastResult.slice(0,-1)
+              display(lastResult);
+            }
+          }
+          
+        break;
+      }
+      click=false;
+      
     }
 
-    function root(num){
-     return Math.pow(num , 1/2)
+    function display(lastRes){
+      if(lastRes=="")
+      lastRes="0";
+        resultBox.innerHTML = lastRes;
+        expressionBox.innerHTML = expression;
+        historyResult = lastRes;
+
     }
-
-
 
     return{
-        res:res
+        Input:Input,
+        clear:clear,
+        display:display
     }
 
 
 })();
 
-
-console.log(eval(""))

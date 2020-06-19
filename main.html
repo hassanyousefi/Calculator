@@ -40,7 +40,7 @@
                             <h1 class="menutext">Standard</h1> 
                         </div>
 
-                        <div class="nexthistory"> <img id="historyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB4klEQVRYR+2W4U3DQAyFXyeAEWACygZsAEwAbFA2gAmACYAJgA1ggsIEMAJMAPqQXSXpxXfXRO2fWqoa5S7287PvnSfasE02HF9bALUM7Eo6k3RipTuy/3dJX5JeJb3Yc1F1SwEQ+EbSeZFX6UHSdQmQFIBfC+JrZHsvCRAYGRLg2zLm3dR+MAJDGOsXkp4j0DkAZExw7M0YgOrI9iTdSjq2TYAAcNIiAKeSnuwr6LxKeOiy1dwys7LxDl9JJiIAUAjtfcFxHAFg3UHga9/K0sojAuC0e6enKMwB4BsypxyPqSbOAegG7e4vAUBPfJojWGj10DoANFm4tAZdJFaqA31NXMIA3/pp4gi7iP37XBcAdGIuCcU8bGYzFoAUQ0X9khOijOYsjuGoAKDpwKjieQzzEnyYZIdN6Oc2lNBKVFVN6OqVFI7KwL7dkyo6hqFwrACgWoiIwe3FtQpyLpIhVi3FBAM1DbgjaYm2CjRezh/zyaXUskgHUCy/jnF0VxGYrStfx804zYEEKmGjZCBhfHPJrR5IuoniiJ6gHN4fDJ+cadcJzjnawdXtcyO081w9kqWYpieYiHzey1WDI0wJlmpe0wN9QGCETAFF1hhs+FhOxrkyhUqYy27U9aG34WAwWwB/XytsITVxIuMAAAAASUVORK5CYII=" alt=""></div>
+                        <div onclick="changeState(false)" class="nexthistory"> <img id="historyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB4klEQVRYR+2W4U3DQAyFXyeAEWACygZsAEwAbFA2gAmACYAJgA1ggsIEMAJMAPqQXSXpxXfXRO2fWqoa5S7287PvnSfasE02HF9bALUM7Eo6k3RipTuy/3dJX5JeJb3Yc1F1SwEQ+EbSeZFX6UHSdQmQFIBfC+JrZHsvCRAYGRLg2zLm3dR+MAJDGOsXkp4j0DkAZExw7M0YgOrI9iTdSjq2TYAAcNIiAKeSnuwr6LxKeOiy1dwys7LxDl9JJiIAUAjtfcFxHAFg3UHga9/K0sojAuC0e6enKMwB4BsypxyPqSbOAegG7e4vAUBPfJojWGj10DoANFm4tAZdJFaqA31NXMIA3/pp4gi7iP37XBcAdGIuCcU8bGYzFoAUQ0X9khOijOYsjuGoAKDpwKjieQzzEnyYZIdN6Oc2lNBKVFVN6OqVFI7KwL7dkyo6hqFwrACgWoiIwe3FtQpyLpIhVi3FBAM1DbgjaYm2CjRezh/zyaXUskgHUCy/jnF0VxGYrStfx804zYEEKmGjZCBhfHPJrR5IuoniiJ6gHN4fDJ+cadcJzjnawdXtcyO081w9kqWYpieYiHzey1WDI0wJlmpe0wN9QGCETAFF1hhs+FhOxrkyhUqYy27U9aG34WAwWwB/XytsITVxIuMAAAAASUVORK5CYII=" alt=""></div>
                     </div>
 
                     <div id="expres" class="exprestion"></div>
@@ -49,11 +49,11 @@
                     <div class="line1">
                         
                         
-                            <div>MC</div>
-                            <div>MR</div>
-                            <div>M+</div>
-                            <div>M+</div>
-                            <div>MS</div>
+                            <div onclick="memory.memBtn('clear')">MC</div>
+                            <div onclick="memory.memBtn('recall')">MR</div>
+                            <div onclick="memory.memBtn('plus')">M+</div>
+                            <div onclick="memory.memBtn('minus')">M-</div>
+                            <div onclick="memory.newMemory()">MS</div>
                             <div id="newM">M&#9662</div>
                         
                         
@@ -67,46 +67,46 @@
                             </div>
                             <div class="main line2">
                                 <div id="percent">%</div>
-                                <div id="CE">CE</div>
-                                <div id="C">C</div>
-                                <div id="del"><img id="delete" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABDklEQVRYR+2W4Q3CIBSErxu4iY6gm+hmbqIj6CZuUHNJMeQFeAelaUzoT8LjPo570Ak7f9PO+hgAw4G/cuAA4AHg1KFzfhtXHegpTv4qgFj8DeAM4NPowrzUyQA9xaldBaCIc451IzUWDJMBFPE7gCOASwQR6l4AboljkgAUcc55LgAUIwS/0CW5rLgAinjYmIXgOFu0FNQiQI14CoJjXpe4ANZWr93s/RCOI1cnHYEKYR2jAwxlCcIF4CKpgKVazQaOtR68BKBCsA0ZuvhmDPB04drahrmUx/0ez9nkIqqBqHkW5COIF1UyoUI0AdhMqGKlefJrmHNiLUQTwFrRZL36R7SJOBcdAMOB3R34AqM1YCEu+sgCAAAAAElFTkSuQmCC" alt=""></div>
-                                <div onclick="cal.res(this)" value="/" id="division">&#xf7</div>
+                                <div onclick="Calculate.clear('CE')" id="CE">CE</div>
+                                <div onclick="Calculate.clear('All')" id="C">C</div>
+                                <div onclick="Calculate.clear('backSpace')" id="del"><img id="delete" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABDklEQVRYR+2W4Q3CIBSErxu4iY6gm+hmbqIj6CZuUHNJMeQFeAelaUzoT8LjPo570Ak7f9PO+hgAw4G/cuAA4AHg1KFzfhtXHegpTv4qgFj8DeAM4NPowrzUyQA9xaldBaCIc451IzUWDJMBFPE7gCOASwQR6l4AboljkgAUcc55LgAUIwS/0CW5rLgAinjYmIXgOFu0FNQiQI14CoJjXpe4ANZWr93s/RCOI1cnHYEKYR2jAwxlCcIF4CKpgKVazQaOtR68BKBCsA0ZuvhmDPB04drahrmUx/0ez9nkIqqBqHkW5COIF1UyoUI0AdhMqGKlefJrmHNiLUQTwFrRZL36R7SJOBcdAMOB3R34AqM1YCEu+sgCAAAAAElFTkSuQmCC" alt=""></div>
+                                <div onclick="Calculate.Input(this)" value="/" id="division">&#xf7</div>
                             </div>
                             
                             
                             <div class="main line3">
-                                <div onclick="cal.res(this)" value="√" id="root">&#8730</div>
-                                <div onclick="cal.res(this)" value="7" id="number">7</div>
-                                <div onclick="cal.res(this)" value="8" id="number">8</div>
-                                <div onclick="cal.res(this)" value="9" id="number">9</div >
-                                <div onclick="cal.res(this)" value="*" id="multiply">&#10005</div>
+                                <div onclick="Calculate.Input(this)" value="√" id="root">&#8730</div>
+                                <div onclick="Calculate.Input(this)" value="7" id="number">7</div>
+                                <div onclick="Calculate.Input(this)" value="8" id="number">8</div>
+                                <div onclick="Calculate.Input(this)" value="9" id="number">9</div >
+                                <div onclick="Calculate.Input(this)" value="*" id="multiply">&#10005</div>
                             </div>
 
 
                             <div class="main line4">
-                                <div onclick="cal.res(this)" value="x2" id="power2">&#120013&#178</div>
-                                <div onclick="cal.res(this)" value="4" id="number">4</div >
-                                <div onclick="cal.res(this)" value="5" id="number">5</div >
-                                <div onclick="cal.res(this)" value="6" id="number">6</div>
-                                <div onclick="cal.res(this)" value="-" id="mines">-</div>
+                                <div onclick="Calculate.Input(this)" value="x2" id="power2">&#120013&#178</div>
+                                <div onclick="Calculate.Input(this)" value="4" id="number">4</div >
+                                <div onclick="Calculate.Input(this)" value="5" id="number">5</div >
+                                <div onclick="Calculate.Input(this)" value="6" id="number">6</div>
+                                <div onclick="Calculate.Input(this)" value="-" id="mines">-</div>
                             </div>  
                             
                             
                             <div class="main line5">
-                                <div onclick="cal.res(this)" value="x3" id="power3">&#120013&#179</div>
-                                <div onclick="cal.res(this)" value="1" id="number">1</div>
-                                <div onclick="cal.res(this)" value="2" id="number" >2</div>
-                                <div onclick="cal.res(this)" value="3" id="number" >3</div>
-                                <div onclick="cal.res(this)" id="plus" value="+">+</div>
+                                <div onclick="Calculate.Input(this)" value="x3" id="power3">&#120013&#179</div>
+                                <div onclick="Calculate.Input(this)" value="1" id="number">1</div>
+                                <div onclick="Calculate.Input(this)" value="2" id="number" >2</div>
+                                <div onclick="Calculate.Input(this)" value="3" id="number" >3</div>
+                                <div onclick="Calculate.Input(this)" id="plus" value="+">+</div>
                             </div>   
                             
                             
                             <div class="main line6">
-                                <div onclick="cal.res(this)" value="1/x" id="mines-power">&#185/&#120013</div>
-                                <div onclick="cal.res(this)" value="±" id="plus-mines">&#177</div>
-                                <div onclick="cal.res(this)" value="0" id="number">0</div>
-                                <div onclick="cal.res(this)" value="." id="dot">&#8729</div>
-                                <div onclick="cal.res(this)" value="=" id="equal">=</div>
+                                <div onclick="Calculate.Input(this)" value="1/x" id="mines-power">&#185/&#120013</div>
+                                <div onclick="Calculate.Input(this)" value="±" id="plus-mines">&#177</div>
+                                <div onclick="Calculate.Input(this)" value="0" id="number">0</div>
+                                <div onclick="Calculate.Input(this)" value="." id="dot">&#8729</div>
+                                <div onclick="Calculate.Input(this)" value="=" id="equal">=</div>
                             </div>
                     </div>
 
@@ -117,28 +117,35 @@
             <div class="right" style="flex-shrink: 0;">
 
                 <div class="topright">
-                    <div class="history">
-                        <h3>History</h3>
+                    <div onclick="changeState(false)" class="history">
+                        <h3 class="active-state" id="hisT">History</h3>
                     </div>
-                    <div class="memory">
+                    <div onclick="changeState(true)" class="memory">
                         <h3 id="mem">Memory</h3>
                     </div>
                 </div>
 
                 <div class="textright">
-                    <h3 id="mem">There's no history yet</h3>
-                    <!-- <div id="history-box">5=0</div> -->
-                </div>
+                    <h3 id="hisText">There's no history yet</h3>
+                    <h3 id="memoText" class="display-off">There's nothing saved in memory</h3>
+                    <div id="history-box"></div>
+                    <div id="memory-box"></div>
 
-                <div>
-                    
+                <div onclick="bucketRemove()" id="rmvHis" class="removeHistory display-off">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAtCAYAAAAtOHJTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACU0lEQVR4Xu2WwWvTUBzHf8le1kFoModTGip2IFJ6qQUtOnso7qKgh1qKUA/Fi2fPo1LRS8/ePHjR2qNr/QOkh4JYbwULHj1MhcHq1lqzNukzLzMjBsH3QgwK7wcl9Jfv7/f75Jvk5QHw4A5wB7gD3AHuAHcgSAeEoJrpH/XTYzy+aiJTFkG8G1EiLxRFeRRUf999tt68SlnF2P1TVRW3Wi2S8x3IT+UUY2kOcEHAsLyPd+OljeKTSqUChULhqF2tVoO3vXfG9nhncwWpzyW0P0Po+BeWecy31TTwsdqD+7vuIY1GAxKJBORyuaP073LkZOn6tZvpi5e3aCCZ4fQplpJn16bD4RAymQzNDFvT6XQgnU7D5r3qy1t3SkWaQmY40rRareJutwvNZpNmhq3RNA2sZxDyl64kl08qH2gKRRpRkJolNSrT9gsErl6vQ7vdhsFgAOVy2Z7t5LwggoAntHC+3lZv836/D9aaBrFYzH62SDg5rxYtwGdauECcox1GdIIBB7T68OFmYC2RdBE+XFSc0qEBhApn7KzotGBEFyqcqH9jYQsXDhnjfxhuHgJcHMF7Jgt+iuffR9RvKinxtQh/3fu0btXuOYDWtxZkWbYXYvL9JOHk3BdhCrNnLBflC25iWkupK1Ipstc8jGw2ax/dOecckiSmjYYvuIePn07I/q3X61EZMRqNbJ22dOLQ1r8d+Xz+l225Ne9P/5mRmGz2dk9WtheL69HU+XPGjfiqeXs1YpxZFPCCV2cewMapNe01Mx0v4A5wB7gD3AHuwP/nwA9bLK0pbAkRngAAAABJRU5ErkJggg==" alt="">
                 </div>
                 
             </div>        
 
         </div>
 
+        <!-- <div class="mini-box">
+            <div id="history-box-mini" class="display-of"></div>
+        </div> -->
+
     <script src="mohasebe.js"></script>
     <script src="history.js"></script>
+    <script src="main.js"></script>
+    <script src="memory.js"></script>
 </body>
 </html>
