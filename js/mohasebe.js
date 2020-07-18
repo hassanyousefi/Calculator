@@ -51,6 +51,8 @@ var Calculate = (function () {
               firstResult = firstResult.replace(lastResult,Math.pow(lastResult, 1/2)) 
             }
           break;
+
+
           case "x2":
             if(lastResult==""){
               expression = "sqr("+ expression + ")"
@@ -124,7 +126,7 @@ var Calculate = (function () {
       }
 
       if(input=="="){
-        myHistory.newHistory();
+        app.newHistory();
       }
       previousInput = input;   
     }

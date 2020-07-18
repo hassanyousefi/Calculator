@@ -145,13 +145,12 @@ body{
        flex-basis: 100px;
        padding-right: 30px;
        justify-content: flex-end;
-       color: rgb(201, 201, 201);
    }
    #newM:hover{
-    background-color: #e6e6e6;
+    background-color: #dddddd;
    }
    #newM:active{
-    background-color: #e6e6e6;
+    background-color :#c6c6c6;
    }
 
    .mainnum{
@@ -375,9 +374,12 @@ body{
 
     #historyimg{
        width: 20px;
-       height: 20px;
+       height: 20px;  
        
-       
+    }
+
+    #historyimg:hover{
+        background-color: rgb(214, 214, 214);
     }
 
 
@@ -414,8 +416,12 @@ body{
         #newM{
             display: flex;
         }
+        #id-mini-box{
+            display: flex;
+        }
 
     }
+
 
 
     @media only screen and (max-width: 740px) {
@@ -527,7 +533,6 @@ body{
         margin: 30px 10px;
     }
     .display-off{
-        
         display: none !important;
     }
 
@@ -553,12 +558,12 @@ body{
         background-color: #b9b9b9;
     }
 
-    #history-box .lable .exp{
+    .lable .exp{
         font-size: 15px;
         margin-bottom: 4px;
         color: #6b6b6b;
     }
-    #history-box .lable .result{
+    .lable .result{
         font-size: 25px;
         font-weight: 600;
     }
@@ -572,17 +577,25 @@ body{
         flex-direction: column;
 
     }
-    #memory-box .lable .number{
+    #mem-box-mini .lable{
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 5px 0;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .lable .number{
         font-size: 25px;
         font-weight: 600; 
         margin: 12px; 
     }
-    #memory-box .lable .button {
+    .lable .button {
         display: flex;
         flex-direction: row;
 
     }
-    #memory-box .lable .button aside{
+    .lable .button aside{
         text-align: center;
         padding: 10px 13px;
         margin: 0 0 0 15px;
@@ -603,6 +616,9 @@ body{
         height: 45px ;
         text-align: center;
     }
+    .removeHistory img{
+        margin: 10px;
+    }
     .removeHistory:hover{
         background-color: rgb(206, 206, 206);
     }
@@ -616,8 +632,8 @@ body{
 
 
 
-    /* #history-box-mini{
-        overflow: auto;
+    #history-box-mini{
+        
         padding: 10px 0;
         
         
@@ -625,13 +641,25 @@ body{
 
 
     .mini-box{
-        max-height:546px;
-        display: flex;
+        overflow: auto;
+        height:63.1%;
+        background-color: gray;
+        display: none;
         position: absolute;
         bottom: 0;
         width: 100%;
         flex-direction: column;
-    } */
+    }
+
+    #history-box-mini .lable{
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding: 7px 14px;
+        margin: 5px 0;
+        align-items: flex-end;
+        flex-direction: column;
+    }
 
 
 
