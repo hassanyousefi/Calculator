@@ -8,6 +8,7 @@ memBoxMini= Doc("mem-box-mini"),
 memText = Doc("memoText"),
 hisText = Doc("hisText"),
 bucketRmvBox = Doc("rmvHis"),
+minibox = Doc("id-mini-box"),
 historyResult = "",
 historyExpression="",
 expression = "",
@@ -82,7 +83,7 @@ var app = (function(){
     
     
     function minimizeBox(){
-         var minibox = Doc("id-mini-box")
+         
          if(minibox.classList.contains("display-off"))
          minibox.classList.remove("display-off");
          else
@@ -165,14 +166,23 @@ var app = (function(){
         this.parentNode.parentNode.remove(); 
     }
 
+
+    function refreshDisplay(){
+        if (window.innerWidth==500){
+            minibox.classList.add('display-off');
+    
+        }
+    };
+
      return{
         newHistory:newHistory,
         newMemory:newMemory,
         changeState:changeStateRightSide,
         bucketRemove:bucketRemove,
-        minimizeBox:minimizeBox
+        minimizeBox:minimizeBox,
+        refreshDisplay:refreshDisplay
         
      }
 
 })();
-
+window.addEventListener("resize", app.refreshDisplay);
