@@ -101,7 +101,7 @@ var app = (function(){
 
 
 
-     function newMemory(){
+    function newMemory(){
         if(!memoryState)
         memoryBox.classList.add("display-off");
         else
@@ -163,7 +163,9 @@ var app = (function(){
 
 
     function memoryLabelClear(){
-        this.parentNode.parentNode.remove(); 
+        this.parentNode.parentNode.remove();
+        if(memoryBox.textContent=="") 
+        changeStateRightSide(true);
     }
 
 
