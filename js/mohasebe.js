@@ -8,7 +8,7 @@ var Calculate = (function () {
         firstResult = resultBox.innerHTML;
         expression = resultBox.innerHTML;
         click = true;
-      }
+      } 
       input = operator.getAttribute("value");
       
       if(firstResult.indexOf(".")>-1&&input==".")return;
@@ -183,7 +183,5 @@ var Calculate = (function () {
         clear:clear,
         display:display
     }
-
-
 })();
 

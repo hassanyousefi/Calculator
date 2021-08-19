@@ -57,14 +57,8 @@ var app = (function(){
                  hisText.classList.add("display-off");
                  bucketRmvBox.classList.remove("display-off");
              }
-                 
-    
-    
          }
-     
      }
-    
-    
     
     function bucketRemove(){
          if(memoryState){
@@ -79,8 +73,6 @@ var app = (function(){
          }
          bucketRmvBox.classList.add("display-off");
     }
-    
-    
     
     function minimizeBox(){
          
@@ -98,8 +90,6 @@ var app = (function(){
              hisBoxMini.classList.remove("display-off");
          }
     }
-
-
 
     function newMemory(){
         if(!memoryState)
@@ -136,8 +126,6 @@ var app = (function(){
         memoryBox.insertBefore(label, memoryBox.firstChild);
     }
 
-
-
     function newHistory(){
         hisText.classList.add("display-off");
         if(memoryState == false)
@@ -161,18 +149,15 @@ var app = (function(){
         hisBoxMini.appendChild(miniHistory);
     }
 
-
     function memoryLabelClear(){
         this.parentNode.parentNode.remove();
         if(memoryBox.textContent=="") 
         changeStateRightSide(true);
     }
 
-
     function refreshDisplay(){
         if (window.innerWidth==500){
             minibox.classList.add('display-off');
-    
         }
     };
 

@@ -1,7 +1,5 @@
 var memory = (function(){
 
-    
-
     function memBtn(type){
         if(memoryBox.innerHTML==""){
             app.newMemory();  
@@ -45,10 +43,7 @@ var memory = (function(){
                 else
                 app.bucketRemove();  
             break;
-        }
-     
-
-        
+        }        
     }
 
     function memoryPlus(){
@@ -63,9 +58,8 @@ var memory = (function(){
             tempMem = myLable.textContent;
             myLable.textContent = eval(tempMem)+Number(memoryValue);
         }
-    }
+    } 
 
-    
     function memoryMinus(){
         var myLable = this.parentNode.parentNode.firstChild;
         
@@ -79,7 +73,6 @@ var memory = (function(){
             myLable.textContent = eval(tempMem)-Number(memoryValue);
         }
     }
-
 
     return{
         memoryPlus:memoryPlus,
